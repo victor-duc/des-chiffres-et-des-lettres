@@ -6,15 +6,15 @@ Des chiffres et des lettres est un jeu télévisé français
 Ce repository contient un programme en Python recréant le jeu, avec une adaptation : il s'agit d'un jeu *Single Player*
 où le joueur joue contre une IA. Hormis ce point, les règles sont les mêmes que le jeu télévisé.
 
-Ce projet a été donné à des étudiants d'une classe de Prépa. Je me suis dit que j'allais relever le défi pour m'amuser
+Ce projet a été donné à des étudiants en 1ère année de Prépa. Je me suis dit que j'allais relever le défi pour m'amuser
 et apprendre le Python.
 
 
 ## Environnement technique
 
 - OS : Windows 10
-- IDE : PyCharm 2020.3.5 (Community Edition)
-- Python : 2.7
+- IDE : PyCharm 2021.1 (Community Edition)
+- Python : 3.9
 - Langue du code : Français
 - Convention de nommage : snake_case
 
@@ -62,9 +62,3 @@ Fin de partie :
 - Si le timer est écoulé, le joueur a perdu et ne marque aucun point
 - Si le joueur a trouvé le mot le plus long, il marque le nombre de lettres en points
 - En cas d'égalité, les 2 joueurs marques le nombre de lettres en points
-
-
-
-
-
-
