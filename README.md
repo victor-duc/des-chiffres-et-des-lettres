@@ -70,16 +70,53 @@ Pour réaliser le projet, je vais créer plusieurs modules.
 Chaque module traitera un sujet donné et sera composé de plusieurs fonctions.
 
 
-### Module Dictionnaire
+### Module _dictionnaire.py_
 
-Ce module contient les fonctions suivantes :
+Ce module contient les variables et fonctions relatives à la gestion du dictionnaire de mots français.
 
-> `def charge(chemin_acces: str, longueur_max: int) -> None`
->
-> Cette fonction charge les mots d'un dictionnaire qui serviront au jeu. 
-> Les mots plus longs 
+#### Variables globales du module
 
-> `def trouve_mots(lettres: list[str]) -> list[str]`
-> 
-> Cette fonction trouve tous les mots qu'il est possible de former à partir des lettres fournies.
+> **mots** : list[str]\
+> Cette variable contient la liste des mots du dictionnaire, lorsqu'on fait appel à la fonction **charge**.
+
+#### Fonctions du module
+
+> **charge**(*chemin_fichier* : str)\
+> Cette fonction charge les mots d'un fichier qui serviront au jeu.
+
+> **contient**(*mot* : str)\
+> Cette fonction indique si le mot existe dans le dictionnaire.
+
+> **filtre**(*max_lettres* : int)\
+> Cette fonction filtre les mots trop long et les doublons.
+
+
+### Module _lettres.py_
+
+Ce module contient les variables et fonctions relatives à la gestion des lettres.
+
+#### Variables globales du module
+
+> **alphabet** : str\
+> Cette variable contient toutes les lettres de l'alphabet.
+
+> **poids** : list[int]\
+> Cette variable contient le poids des lettres, lorsqu'on fait appel à la fonction **analyse**.
+
+> **voyelles** : str\
+> Cette variable contient toutes les voyelles de l'alphabet.
+
+#### Fonctions du module
+
+> **analyse**(*mots_dictionnaire* : list[str])\
+> Cette fonction analyse les mots du dictionnaire pour défnir le **poids** des lettres.
+> Le poids des lettres correspond au nombre d'occurrences des lettres dans le dictionnaire.
+
+> **compte_voyelles**(*mot* : str)\
+> Cette fonction compte le nombre de voyelles dans le mot.
+
+> **tire**(*nombre_lettres* : int, *min_voyelles* : int)\
+> Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
+
+
 
