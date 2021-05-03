@@ -74,12 +74,12 @@ Chaque module traitera un sujet donné et sera composé de plusieurs fonctions.
 
 Ce module contient les variables et fonctions relatives à la gestion du dictionnaire de mots français.
 
-#### Variables globales du module
+#### Variables globales
 
 > **mots** : list[str]\
 > Cette variable contient la liste des mots du dictionnaire, lorsqu'on fait appel à la fonction **charge**.
 
-#### Fonctions du module
+#### Fonctions
 
 > **charge**(*chemin_fichier* : str)\
 > Cette fonction charge les mots d'un fichier qui serviront au jeu.
@@ -95,7 +95,7 @@ Ce module contient les variables et fonctions relatives à la gestion du diction
 
 Ce module contient les variables et fonctions relatives à la gestion des lettres.
 
-#### Variables globales du module
+#### Variables globales
 
 > **alphabet** : str\
 > Cette variable contient toutes les lettres de l'alphabet.
@@ -106,7 +106,7 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > **voyelles** : str\
 > Cette variable contient toutes les voyelles de l'alphabet.
 
-#### Fonctions du module
+#### Fonctions
 
 > **analyse**(*mots_dictionnaire* : list[str])\
 > Cette fonction analyse les mots du dictionnaire pour défnir le **poids** des lettres.
@@ -115,7 +115,7 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > **compte_voyelles**(*mot* : str)\
 > Cette fonction compte le nombre de voyelles dans le mot.
 
-> **tire_aleatoire**(*lettres* : int, *min_voyelles* : int)\
+> **tire_aleatoire**(*nombre_lettres* : int, *min_voyelles* : int)\
 > Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
 
 > **trouve_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
@@ -126,7 +126,7 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 
 Ce module contient les variables et fonctions relatives à la gestion de l'IA du jeu.
 
-#### Variables globales du module
+#### Variables globales
 
 > **niveau_actuel** : str\
 > Cette variable contient le niveau actuel de l'IA.
@@ -134,7 +134,7 @@ Ce module contient les variables et fonctions relatives à la gestion de l'IA du
 > **niveaux_possibles** : dict[str, any]\
 > Cette variable contient la configuration des différents niveaux de l'IA. 
 
-#### Fonctions du module
+#### Fonctions
 
 > **selectionne_mot**(*mots* : list[str])\
 > Cette fonction sélectionne un mot dans la liste de mots fournis.
