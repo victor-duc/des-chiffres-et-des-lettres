@@ -62,3 +62,24 @@ Fin de partie :
 - Si le timer est écoulé, le joueur a perdu et ne marque aucun point
 - Si le joueur a trouvé le mot le plus long, il marque le nombre de lettres en points
 - En cas d'égalité, les 2 joueurs marques le nombre de lettres en points
+
+
+## Modularisation
+
+Pour réaliser le projet, je vais créer plusieurs modules.
+Chaque module traitera un sujet donné et sera composé de plusieurs fonctions.
+
+
+### Module Dictionnaire
+
+Ce module contient les fonctions suivantes :
+
+> `def charge(chemin_acces: str, longueur_max: int) -> None`
+>
+> Cette fonction charge les mots d'un dictionnaire qui serviront au jeu. 
+> Les mots plus longs 
+
+> `def trouve_mots(lettres: list[str]) -> list[str]`
+> 
+> Cette fonction trouve tous les mots qu'il est possible de former à partir des lettres fournies.
+
