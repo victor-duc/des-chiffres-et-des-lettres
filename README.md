@@ -115,8 +115,33 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > **compte_voyelles**(*mot* : str)\
 > Cette fonction compte le nombre de voyelles dans le mot.
 
-> **tire**(*nombre_lettres* : int, *min_voyelles* : int)\
+> **tire_aleatoire**(*lettres* : int, *min_voyelles* : int)\
 > Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
 
+> **trouve_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
+> Cette fonction trouve tous les mots qu'il est possible de former à partir des lettres fournies.
+
+
+### Module _ia.py_
+
+Ce module contient les variables et fonctions relatives à la gestion de l'IA du jeu.
+
+#### Variables globales du module
+
+> **niveau_actuel** : str\
+> Cette variable contient le niveau actuel de l'IA.
+
+> **niveaux_possibles** : dict[str, any]\
+> Cette variable contient la configuration des différents niveaux de l'IA. 
+
+#### Fonctions du module
+
+> **selectionne_mot**(*mots* : list[str])\
+> Cette fonction sélectionne un mot dans la liste de mots fournis.
+> La longueur du mot retournée dépend du **niveau_actuel** de l'IA.
+
+> **trouve_mot**(*lettres* : str, *mots_dictionnaire* : list[str])\
+> Cette fonction trouve un mot qu'il est possible de former à partir des lettres fournies.
+> La longueur du mot retournée dépend du **niveau_actuel** de l'IA.
 
 
