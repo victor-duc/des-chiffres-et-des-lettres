@@ -82,13 +82,13 @@ Ce module contient les variables et fonctions relatives à la gestion du diction
 #### Fonctions
 
 > **charge**(*chemin_fichier* : str)\
-> Cette fonction charge les mots d'un fichier qui serviront au jeu.
+> Cette fonction charge les **mots** d'un fichier qui serviront au jeu.
 
 > **contient**(*mot* : str)\
 > Cette fonction indique si le mot existe dans le dictionnaire.
 
 > **filtre**(*max_lettres* : int)\
-> Cette fonction filtre les mots trop long et les doublons.
+> Cette fonction filtre les **mots** trop long et les doublons.
 
 
 ### Module _lettres.py_
@@ -120,6 +120,19 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 
 > **trouve_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
 > Cette fonction trouve tous les mots qu'il est possible de former à partir des lettres fournies.
+
+
+### Module _entiers.py_
+
+Ce module contient les variables et fonctions relatives à la gestion des entiers.
+
+#### Fonctions
+
+> **tire_entiers**(*entiers_disponibles* : list[int], *n* : int)\
+> Cette fonction tire aléatoirement les entiers pour le jeu en piochant N entiers dans la liste.
+
+> **tire_objectif**(*valeur_min* : int, *valeur_max* : int)\
+> Cette fonction tire aléatoirement l'entier cible du jeu entre la valeur min et max.
 
 
 ### Module _ia.py_
