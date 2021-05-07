@@ -185,7 +185,7 @@ Ce module contient les variables et fonctions relatives à la gestion de l'IA du
 > Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le mot soit long.
 
 > **selectionne_operation**(*objectif* : int, *operations* : dict[int, any])\
-> Cette fonction sélectionne une opération dans la liste d'opérations fournies.
+> Cette fonction sélectionne une opération dans la liste d'opérations fournies.\
 > Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le résultat de l'opération soit proche
 > de l'objectif.
 
@@ -194,6 +194,6 @@ Ce module contient les variables et fonctions relatives à la gestion de l'IA du
 > Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le mot soit long.
 
 > **trouve_operation**(*objectif* : int, *entiers* : list[int])\
-> Cette fonction trouve une opération à partir des entiers fournis dont le résultat se rapproche de l'objectif.
+> Cette fonction trouve une opération à partir des entiers fournis dont le résultat se rapproche de l'objectif.\
 > Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le résultat de l'opération soit proche
 > de l'objectif.
