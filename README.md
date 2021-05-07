@@ -115,11 +115,12 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > **compte_voyelles**(*mot* : str)\
 > Cette fonction compte le nombre de voyelles dans le mot.
 
+> **forme_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
+> Cette fonction forme tous les mots possibles à partir des lettres fournies.
+> Les mots retournés font parties du dictionnaire fourni.
+
 > **tire_aleatoire**(*nombre_lettres* : int, *min_voyelles* : int)\
 > Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
-
-> **trouve_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
-> Cette fonction trouve tous les mots qu'il est possible de former à partir des lettres fournies.
 
 
 ### Module _entiers.py_
@@ -133,6 +134,36 @@ Ce module contient les variables et fonctions relatives à la gestion des entier
 
 > **tire_objectif**(*valeur_min* : int, *valeur_max* : int)\
 > Cette fonction tire aléatoirement l'entier cible du jeu entre la valeur min et max.
+
+
+### Module _operation.py_
+
+Ce module contient les variables et fonctions relatives à la gestion des opérations.
+
+#### Fonctions
+
+> **forme_addition**(*a* : int, *b* : int)\
+> Cette fonction retourne l'addition de a et b.
+> Si le résultat est différent de zéro, elle retourne l'addition, sinon return *None*.
+
+> **forme_division**(*a* : int, *b* : int)\
+> Cette fonction fait la division de a par b si a est inférieur à b, sinon la division de b par a.
+> Si le résultat est un entier, elle retourne la division, sinon return *None*.
+
+> **forme_multiplication**(*a* : int, *b* : int)\
+> Cette fonction retourne la multiplication de a et b.
+> Si le résultat est différent de zéro, elle retourne la multiplication, sinon return *None*.
+
+> **forme_soustraction**(*a* : int, *b* : int)\
+> Cette fonction fait la soustraction de a par b si a est supérieur à b, sinon la soustraction de b par a.
+> Si le résultat est différent de zéro, elle retourne la soustraction, sinon return *None*.
+
+> **forme_operations**(*entiers* : list[int])\
+> Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.
+> Elle retourne pour chaque résultat possible, la suite d'opération la plus courte.
+
+> **optimise_operations**(*operations* : dict[int, any], *objectif* : int)\
+> Cette fonction optimise les opérations fournies supprimant les opérations qui s'éloigne de l'objectif. 
 
 
 ### Module _ia.py_
@@ -150,11 +181,19 @@ Ce module contient les variables et fonctions relatives à la gestion de l'IA du
 #### Fonctions
 
 > **selectionne_mot**(*mots* : list[str])\
-> Cette fonction sélectionne un mot dans la liste de mots fournis.
-> La longueur du mot retournée dépend du **niveau_actuel** de l'IA.
+> Cette fonction sélectionne un mot dans la liste de mots fournis.\
+> Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le mot soit long.
+
+> **selectionne_operation**(*objectif* : int, *operations* : dict[int, any])\
+> Cette fonction sélectionne une opération dans la liste d'opérations fournies.
+> Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le résultat de l'opération soit proche
+> de l'objectif.
 
 > **trouve_mot**(*lettres* : str, *mots_dictionnaire* : list[str])\
-> Cette fonction trouve un mot qu'il est possible de former à partir des lettres fournies.
-> La longueur du mot retournée dépend du **niveau_actuel** de l'IA.
+> Cette fonction trouve un mot qu'il est possible de former à partir des lettres fournies.\
+> Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le mot soit long.
 
-
+> **trouve_operation**(*objectif* : int, *entiers* : list[int])\
+> Cette fonction trouve une opération à partir des entiers fournis dont le résultat se rapproche de l'objectif.
+> Plus le **niveau_actuel** de l'IA est élevé, plus il y a de chance que le résultat de l'opération soit proche
+> de l'objectif.
