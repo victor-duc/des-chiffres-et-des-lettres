@@ -109,14 +109,14 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 #### Fonctions
 
 > **analyse**(*mots_dictionnaire* : list[str])\
-> Cette fonction analyse les mots du dictionnaire pour défnir le **poids** des lettres.
+> Cette fonction analyse les mots du dictionnaire pour défnir le **poids** des lettres.\
 > Le poids des lettres correspond au nombre d'occurrences des lettres dans le dictionnaire.
 
 > **compte_voyelles**(*mot* : str)\
 > Cette fonction compte le nombre de voyelles dans le mot.
 
 > **forme_mots**(*lettres* : str, *mots_dictionnaire* : list[str])\
-> Cette fonction forme tous les mots possibles à partir des lettres fournies.
+> Cette fonction forme tous les mots possibles à partir des lettres fournies.\
 > Les mots retournés font parties du dictionnaire fourni.
 
 > **tire_aleatoire**(*nombre_lettres* : int, *min_voyelles* : int)\
@@ -159,7 +159,7 @@ Ce module contient les variables et fonctions relatives à la gestion des opéra
 > Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
 > **forme_operations**(*entiers* : list[int])\
-> Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.
+> Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.\
 > Elle retourne pour chaque résultat possible, la suite d'opérations la plus courte.
 
 > **optimise_operations**(*operations* : dict[int, any], *objectif* : int)\
