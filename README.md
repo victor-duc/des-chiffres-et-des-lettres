@@ -143,24 +143,24 @@ Ce module contient les variables et fonctions relatives à la gestion des opéra
 #### Fonctions
 
 > **forme_addition**(*a* : int, *b* : int)\
-> Cette fonction retourne l'addition de a et b.
-> Si le résultat est différent de zéro, elle retourne l'addition, sinon return *None*.
+> Cette fonction retourne l'addition de a et b.\
+> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
 > **forme_division**(*a* : int, *b* : int)\
-> Cette fonction fait la division de a par b si a est inférieur à b, sinon la division de b par a.
-> Si le résultat est un entier, elle retourne la division, sinon return *None*.
+> Cette fonction retourne la division de a par b.\
+> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
 > **forme_multiplication**(*a* : int, *b* : int)\
-> Cette fonction retourne la multiplication de a et b.
-> Si le résultat est différent de zéro, elle retourne la multiplication, sinon return *None*.
+> Cette fonction retourne la multiplication de a et b.\
+> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
 > **forme_soustraction**(*a* : int, *b* : int)\
-> Cette fonction fait la soustraction de a par b si a est supérieur à b, sinon la soustraction de b par a.
-> Si le résultat est différent de zéro, elle retourne la soustraction, sinon return *None*.
+> Cette fonction retourne la soustraction de a et b\
+> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
 > **forme_operations**(*entiers* : list[int])\
 > Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.
-> Elle retourne pour chaque résultat possible, la suite d'opération la plus courte.
+> Elle retourne pour chaque résultat possible, la suite d'opérations la plus courte.
 
 > **optimise_operations**(*operations* : dict[int, any], *objectif* : int)\
 > Cette fonction optimise les opérations fournies supprimant les opérations qui s'éloigne de l'objectif. 
