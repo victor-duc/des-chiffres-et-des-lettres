@@ -142,19 +142,19 @@ Ce module contient les variables et fonctions relatives à la gestion des opéra
 
 #### Fonctions
 
-> **forme_addition**(*a* : int, *b* : int)\
+> **cree_addition**(*a* : int, *b* : int)\
 > Cette fonction retourne l'addition de a et b.\
 > Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
-> **forme_division**(*a* : int, *b* : int)\
+> **cree_division**(*a* : int, *b* : int)\
 > Cette fonction retourne la division de a par b.\
 > Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
-> **forme_multiplication**(*a* : int, *b* : int)\
+> **cree_multiplication**(*a* : int, *b* : int)\
 > Cette fonction retourne la multiplication de a et b.\
 > Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
-> **forme_soustraction**(*a* : int, *b* : int)\
+> **cree_soustraction**(*a* : int, *b* : int)\
 > Cette fonction retourne la soustraction de a et b\
 > Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
