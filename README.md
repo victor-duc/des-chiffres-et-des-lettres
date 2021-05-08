@@ -9,8 +9,6 @@ où le joueur joue contre une IA. Hormis ce point, les règles sont les mêmes q
 Ce projet a été donné à des étudiants en 1ère année de Prépa. Je me suis dit que j'allais relever le défi pour m'amuser
 et apprendre le Python.
 
-[[_TOC_]]
-
 
 ## Règles du jeu
 
@@ -97,6 +95,7 @@ Ce module contient les variables et fonctions relatives à la gestion du diction
 
 ### Module _lettres.py_
 
+Lien vers le module : [`src/lettres.py`](src/lettres.py)\
 Ce module contient les variables et fonctions relatives à la gestion des lettres.
 
 #### Variables globales
@@ -123,7 +122,7 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > Cette fonction forme tous les mots possibles à partir des lettres fournies.\
 > Les mots retournés font parties du dictionnaire fourni.
 
-> **tire_aleatoire**(*nombre_lettres* : int, *min_voyelles* : int)\
+> **tire_lettres**(*nombre_lettres* : int, *min_voyelles* : int)\
 > Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
 
 
