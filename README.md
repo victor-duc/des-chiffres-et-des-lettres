@@ -133,6 +133,9 @@ Ce module contient les variables et fonctions relatives à la gestion des entier
 
 #### Fonctions
 
+> **est_positif_non_nul**(*valeur* : any)\
+> Cette fonction indique si la valeur fournie est un entier positif non nul.
+
 > **tire_entiers**(*entiers_disponibles* : list[int], *n* : int)\
 > Cette fonction tire aléatoirement les entiers pour le jeu en piochant N entiers dans la liste.
 
@@ -142,27 +145,38 @@ Ce module contient les variables et fonctions relatives à la gestion des entier
 
 ### Module _operation.py_
 
-Ce module contient les variables et fonctions relatives à la gestion des opérations.
+Lien vers le module : [`src/operation.py`](src/operation.py)\
+Ce module contient les fonctions relatives à la gestion des opérations.
 
 #### Fonctions
 
 > **cree_addition**(*a* : int, *b* : int)\
-> Cette fonction retourne l'addition de a et b.\
-> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
+> Cette fonction retourne l'addition de `a` et `b`.
 
 > **cree_division**(*a* : int, *b* : int)\
-> Cette fonction retourne la division de a par b.\
-> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
+> Cette fonction retourne la division de `a` par `b` (ou `b` par `a`)
 
 > **cree_multiplication**(*a* : int, *b* : int)\
-> Cette fonction retourne la multiplication de a et b.\
-> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
+> Cette fonction retourne la multiplication de `a` et `b`.
+
+> **cree_operation**(*a* : int, *operateur* : str, *b* : int, *c* : int)\
+> Cette fonction crée un dictionnaire correspondant à l'opération.\
+> 
+> Le dictionnaire aura les clés suivantes:
+>   - `"a"`: opérande de l'opération
+>   - `"b"`: opérande de l'opération
+>   - `"c"`: résultat de l'opération
+>   - `"operateur"`: opérateur de l'opération
+> 
+> Le résultat doit être un entier positif, sinon la fonction retourne *None*.
+
+> **cree_operations**(*a* : int, *b* : int)\
+> Cette fonction crée les opérations entre `a` et `b` dont le résultat est un entier positif non nul.
 
 > **cree_soustraction**(*a* : int, *b* : int)\
-> Cette fonction retourne la soustraction de a et b\
-> Règle : Le résultat doit être un entier positif, sinon la fonction retourne *None*.
+> Cette fonction retourne la soustraction `a` et `b`.
 
-> **forme_operations**(*entiers* : list[int])\
+> **forme_operations**(*entiers_tries* : list[int])\
 > Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.\
 > Elle retourne pour chaque résultat possible, la suite d'opérations la plus courte.
 

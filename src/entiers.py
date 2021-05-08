@@ -12,6 +12,16 @@ import random
 # Fonctions triées par ordre alphabétique
 # ----------------------------------------------------------------------------------------------------------------------
 
+def est_positif_non_nul(valeur: any):
+    """Indique si la valeur fournie est un entier positif non nul."""
+    if valeur is not None:
+        if isinstance(valeur, int):
+            return valeur > 0
+        if isinstance(valeur, float) and valeur.is_integer():
+            return valeur > 0
+    return False
+
+
 def tire_entiers(entiers_disponibles: list[int], n: int) -> list[int]:
     """
         Tire aléatoirement les entiers pour le jeu en piochant N entiers dans la liste fournies.
