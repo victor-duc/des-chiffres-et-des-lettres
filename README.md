@@ -10,15 +10,6 @@ Ce projet a été donné à des étudiants en 1ère année de Prépa. Je me suis
 et apprendre le Python.
 
 
-## Environnement technique
-
-- OS : Windows 10
-- IDE : PyCharm 2021.1 (Community Edition)
-- Python : 3.9
-- Langue du code : Français
-- Convention de nommage : snake_case
-
-
 ## Règles du jeu
 
 Une partie se compose de 12 manches de chiffres et de lettres, avec l'alternance suivante :
@@ -64,6 +55,15 @@ Fin de partie :
 - En cas d'égalité, les 2 joueurs marques le nombre de lettres en points
 
 
+## Environnement technique
+
+- OS : Windows 10
+- IDE : PyCharm 2021.1 (Community Edition)
+- Python : 3.9
+- Langue du code : Français
+- Convention de nommage : snake_case
+
+
 ## Modularisation
 
 Pour réaliser le projet, je vais créer plusieurs modules.
@@ -88,7 +88,7 @@ Ce module contient les variables et fonctions relatives à la gestion du diction
 > Cette fonction indique si le mot existe dans le dictionnaire.
 
 > **filtre**(*max_lettres* : int)\
-> Cette fonction filtre les **mots** trop long et les doublons.
+> Cette fonction filtre les **mots** trop long, ayant plus de **max_lettres**.
 
 
 ### Module _lettres.py_
