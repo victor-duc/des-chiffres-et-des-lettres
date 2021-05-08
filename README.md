@@ -128,6 +128,7 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 
 ### Module _entiers.py_
 
+Lien vers le module : [`src/entiers.py`](src/entiers.py)\
 Ce module contient les variables et fonctions relatives à la gestion des entiers.
 
 #### Fonctions
