@@ -9,6 +9,8 @@ où le joueur joue contre une IA. Hormis ce point, les règles sont les mêmes q
 Ce projet a été donné à des étudiants en 1ère année de Prépa. Je me suis dit que j'allais relever le défi pour m'amuser
 et apprendre le Python.
 
+[[_TOC_]]
+
 
 ## Règles du jeu
 
