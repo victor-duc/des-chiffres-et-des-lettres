@@ -72,7 +72,9 @@ Chaque module traitera un sujet donné et sera composé de plusieurs fonctions.
 
 ### Module _dictionnaire.py_
 
+Lien vers le module : [`src/dictionnaire.py`](src/dictionnaire.py)\
 Ce module contient les variables et fonctions relatives à la gestion du dictionnaire de mots français.
+
 
 #### Variables globales
 
