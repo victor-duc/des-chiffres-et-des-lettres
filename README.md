@@ -93,9 +93,9 @@ Ce module contient les variables et fonctions relatives à la gestion du diction
 > Cette fonction filtre les **mots** trop long, ayant plus de **max_lettres**.
 
 
-### Module _lettres.py_
+### Module _lettre.py_
 
-Lien vers le module : [`src/lettres.py`](src/lettres.py)\
+Lien vers le module : [`src/lettre.py`](src/lettre.py)\
 Ce module contient les variables et fonctions relatives à la gestion des lettres.
 
 #### Variables globales
