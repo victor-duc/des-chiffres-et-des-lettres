@@ -5,7 +5,7 @@
 # Module      : moteur_chiffres.py
 # Description : Ce module contient les fonctions relatives à la gestion des opérations.
 # ----------------------------------------------------------------------------------------------------------------------
-import entiers
+import entier
 
 
 # ----------------------------------------------------------------------------------------------------------------------
@@ -24,7 +24,7 @@ def cree_operation(a: int, operateur: str, b: int, c: int) -> dict[str, any]:
 
         Le résultat doit être un entier positif, sinon la fonction retourne None.
     """
-    if entiers.est_positif_non_nul(c):
+    if entier.est_positif_non_nul(c):
         if isinstance(c, float):
             c = int(c)  # On s'assure que c est un entier car le résultat d'une division est un float
         return {"a": a, "operateur": operateur, "b": b, "c": c}
@@ -73,7 +73,7 @@ def forme_operations(entiers: list[int]) -> dict[int, any]:
         for b in operations_b:
             operations_c = cree_operations(a, b)
             for c in operations_c:
-                operations_bc = []
+                operations_bc: list[any] = []
                 if isinstance(operations_b[b], list):
                     operations_bc = operations_b[b] + [operations_c[c]]
                 else:
@@ -86,7 +86,7 @@ def forme_operations(entiers: list[int]) -> dict[int, any]:
 
 def optimise_operations(operations: dict[int, any], objectif: int) -> None:
     """Optimise les opérations fournies supprimant les opérations qui s'éloigne de l'objectif."""
-    operations_optimisees = {}
+    operations_optimisees: dict[int, any] = {}
 
     for c in operations:
         operations_c = operations[c]

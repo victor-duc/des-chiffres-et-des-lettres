@@ -126,9 +126,9 @@ Ce module contient les variables et fonctions relatives à la gestion des lettre
 > Cette fonction tire des lettres aléatoires en se basant sur le **poids** des lettres.
 
 
-### Module _entiers.py_
+### Module _entier.py_
 
-Lien vers le module : [`src/entiers.py`](src/entiers.py)\
+Lien vers le module : [`src/entier.py`](src/entier.py)\
 Ce module contient les variables et fonctions relatives à la gestion des entiers.
 
 #### Fonctions
