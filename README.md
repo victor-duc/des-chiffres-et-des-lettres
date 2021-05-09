@@ -152,7 +152,6 @@ Ce module contient les fonctions relatives à la gestion des opérations.
 
 > **cree_operation**(*a* : int, *operateur* : str, *b* : int, *c* : int)\
 > Cette fonction crée un dictionnaire correspondant à l'opération.\
-> 
 > Le dictionnaire aura les clés suivantes:
 >   - `"a"`: opérande de l'opération
 >   - `"b"`: opérande de l'opération
@@ -161,10 +160,10 @@ Ce module contient les fonctions relatives à la gestion des opérations.
 > 
 > Le résultat doit être un entier positif, sinon la fonction retourne *None*.
 
-> **cree_soustraction**(*a* : int, *b* : int)\
-> Cette fonction retourne la soustraction `a` et `b`.
+> **cree_operations**(*a* : int, *b* : int)\
+> Cette fonction crée les opérations entre `a` et `b` dont le résultat est un entier positif non nul.
 
-> **forme_operations**(*entiers_tries* : list[int])\
+> **forme_operations**(*entiers* : list[int])\
 > Cette fonction forme les suites d'opérations qu'il est possible de créer à partir des entiers fournis.\
 > Elle retourne pour chaque résultat possible, la suite d'opérations la plus courte.
 
