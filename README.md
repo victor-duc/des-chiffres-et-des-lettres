@@ -137,7 +137,7 @@ Ce module contient les variables et fonctions relatives à la gestion des entier
 > Cette fonction indique si la valeur fournie est un entier positif non nul.
 
 > **tire_entiers**(*entiers_disponibles* : list[int], *n* : int)\
-> Cette fonction tire aléatoirement les entiers pour le jeu en piochant N entiers dans la liste.
+> Cette fonction tire aléatoirement les entiers pour le jeu en piochant `n` entiers dans la liste.
 
 > **tire_objectif**(*valeur_min* : int, *valeur_max* : int)\
 > Cette fonction tire aléatoirement l'entier cible du jeu entre la valeur min et max.
@@ -150,15 +150,6 @@ Ce module contient les fonctions relatives à la gestion des opérations.
 
 #### Fonctions
 
-> **cree_addition**(*a* : int, *b* : int)\
-> Cette fonction retourne l'addition de `a` et `b`.
-
-> **cree_division**(*a* : int, *b* : int)\
-> Cette fonction retourne la division de `a` par `b` (ou `b` par `a`)
-
-> **cree_multiplication**(*a* : int, *b* : int)\
-> Cette fonction retourne la multiplication de `a` et `b`.
-
 > **cree_operation**(*a* : int, *operateur* : str, *b* : int, *c* : int)\
 > Cette fonction crée un dictionnaire correspondant à l'opération.\
 > 
@@ -169,9 +160,6 @@ Ce module contient les fonctions relatives à la gestion des opérations.
 >   - `"operateur"`: opérateur de l'opération
 > 
 > Le résultat doit être un entier positif, sinon la fonction retourne *None*.
-
-> **cree_operations**(*a* : int, *b* : int)\
-> Cette fonction crée les opérations entre `a` et `b` dont le résultat est un entier positif non nul.
 
 > **cree_soustraction**(*a* : int, *b* : int)\
 > Cette fonction retourne la soustraction `a` et `b`.

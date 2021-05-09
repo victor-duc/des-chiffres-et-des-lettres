@@ -12,26 +12,6 @@ import entiers
 # Fonctions triées par ordre alphabétique
 # ----------------------------------------------------------------------------------------------------------------------
 
-def cree_addition(a: int, b: int) -> dict[str, any]:
-    """Crée l'addition de a et b."""
-    return cree_operation(a, "+", b, a + b)
-
-
-def cree_division(a: int, b: int) -> dict[str, any]:
-    """Crée la division de a par b, ou b par a (la plus petite valeur sera le diviseur)"""
-    if a < b:
-        a, b = b, a  # Si a inférieur à b, on inverse les valeurs
-    if b == 0:
-        return None  # On évite la division par zéro
-
-    return cree_operation(a, "/", b, a / b)
-
-
-def cree_multiplication(a: int, b: int) -> dict[str, any]:
-    """Crée la multiplication de a et b."""
-    return cree_operation(a, "*", b, a * b)
-
-
 def cree_operation(a: int, operateur: str, b: int, c: int) -> dict[str, any]:
     """
         Crée un dictionnaire correspondant à l'opération.
@@ -54,30 +34,21 @@ def cree_operation(a: int, operateur: str, b: int, c: int) -> dict[str, any]:
 
 def cree_operations(a: int, b: int) -> dict[int, any]:
     """Crée les opérations entre `a` et `b` dont le résultat est un entier positif non nul."""
-    operations: dict[int, any] = {}
-    fonctions: list[any] = [
-        cree_addition,
-        cree_division,
-        cree_multiplication,
-        cree_soustraction
-    ]
-    for fonction in fonctions:
-        operation = fonction(a, b)
-        if operation is None:
-            continue
-
-        c = operation["c"]
-        if c not in operations:
-            operations[c] = operation
-    return operations
-
-
-def cree_soustraction(a: int, b: int) -> dict[str, any]:
-    """Crée la soustraction de a et b."""
     if a < b:
         a, b = b, a  # Si a inférieur à b, on inverse les valeurs
 
-    return cree_operation(a, "-", b, a - b)
+    if b == 0:
+        return {}  # Les opérations avec b à zéro sont inutiles ou impossible
+
+    operations: list[any] = [
+        cree_operation(a, "-", b, a - b),
+        cree_operation(a, "/", b, a / b),
+        cree_operation(a, "*", b, a * b),
+        cree_operation(a, "+", b, a + b),
+    ]
+
+    # Indexation par résultat
+    return {operation["c"]: operation for operation in operations if operation is not None}
 
 
 def forme_operations(entiers: list[int]) -> dict[int, any]:
@@ -110,13 +81,6 @@ def forme_operations(entiers: list[int]) -> dict[int, any]:
                 if c not in operations or len(operations[c]) > len(operations_bc):
                     operations[c] = operations_bc
 
-        for b in operations_b:
-            if b not in operations or len(operations[b]) > len(operations_b[b]):
-                if isinstance(operations_b[b], list):
-                    operations[b] = operations_b[b]
-                else:
-                    operations[b] = [operations_b[b]]
-
     return operations
 
 
@@ -125,9 +89,6 @@ def optimise_operations(operations: dict[int, any], objectif: int) -> None:
     operations_optimisees = {}
 
     for c in operations:
-        if c > (objectif * 2):
-            continue
-
         operations_c = operations[c]
         nombre_operations = len(operations_c)
         min_distance = abs(objectif - c)
@@ -143,4 +104,3 @@ def optimise_operations(operations: dict[int, any], objectif: int) -> None:
         operations_optimisees[c] = operations_c[0:index + 1]
 
     return operations_optimisees
-
