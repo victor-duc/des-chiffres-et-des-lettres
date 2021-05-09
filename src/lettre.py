@@ -2,7 +2,7 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Projet      : Des chiffres et des lettres
-# Module      : lettres.py
+# Module      : lettre.py
 # Description : Ce module contient les variables et fonctions relatives à la gestion des lettres.
 # ----------------------------------------------------------------------------------------------------------------------
 import random

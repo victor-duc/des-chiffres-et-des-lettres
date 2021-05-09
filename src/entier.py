@@ -2,7 +2,7 @@
 
 # ----------------------------------------------------------------------------------------------------------------------
 # Projet      : Des chiffres et des lettres
-# Module      : moteur_chiffres.py
+# Module      : entier.py
 # Description : Ce module contient les fonctions relatives à la gestion des entiers.
 # ----------------------------------------------------------------------------------------------------------------------
 import random
