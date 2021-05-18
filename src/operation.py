@@ -84,7 +84,7 @@ def forme_operations(entiers: list[int]) -> dict[int, any]:
     return operations
 
 
-def optimise_operations(operations: dict[int, any], objectif: int) -> None:
+def optimise_operations(operations: dict[int, any], objectif: int) -> dict[int, any]:
     """Optimise les opérations fournies supprimant les opérations qui s'éloigne de l'objectif."""
     operations_optimisees: dict[int, any] = {}
 
