@@ -16,15 +16,9 @@ import random
 niveau_actuel = "MOYEN"
 niveaux_possibles = {
     "CHIFFRES": {
-        'FACILE': {
-
-        },
-        'MOYEN': {
-
-        },
-        'DIFFICILE': {
-
-        }
+        'FACILE': 100,
+        'MOYEN': 50,
+        'DIFFICILE': 5
     },
     "LETTRES": {
         'FACILE':    [0, 0, 1, 1, 1, 9, 5, 3, 1],
@@ -59,7 +53,16 @@ def selectionne_mot(mots: list[str]) -> str:
 def selectionne_operation(objectif: int, operations: dict[int, any]) -> dict[str, any]:
     """Sélectionne une opération dans la liste d'opérations fournies."""
 
-    return
+    # Sélectionne une distance aléatoire par rapport à l'objectif selon le niveau de l'IA
+    max_distance = niveaux_possibles["CHIFFRES"][niveau_actuel]
+    distances = sorted([abs(objectif - resultat) for resultat in operations.keys()])
+    if len(distances) > max_distance:
+        distances = distances[0:max_distance]
+    distance = random.choice(distances)
+
+    # Sélectionne l'opération correspondant à la distance sélectionnée
+    operations = [operations[resultat] for resultat in operations.keys() if abs(objectif - resultat) == distance]
+    return operations[0]
 
 
 def trouve_mot(lettres: str, mots_dictionnaire: list[str]) -> str:
